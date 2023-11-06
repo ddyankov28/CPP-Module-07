@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/nfs/homes/ddyankov/Desktop/github/CPP-Module-07/ex00",
-      "program": "/nfs/homes/ddyankov/Desktop/github/CPP-Module-07/ex00/build/Debug/outDebug",
+      "cwd": "/nfs/homes/ddyankov/Desktop/github/CPP-Module-07/ex02",
+      "program": "/nfs/homes/ddyankov/Desktop/github/CPP-Module-07/ex02/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
