@@ -6,13 +6,13 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 11:27:24 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/11/06 10:15:34 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/11/06 17:08:06 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "iter.hpp"
 
-int main()
+/*int main()
 {
     int intArray[] = { 12, 44, 42, 33, 126 };
     std::cout << RED << " << Integer array with >> " << RESET << std::endl;
@@ -31,4 +31,36 @@ int main()
     iter(boolArray, sizeof(boolArray) / sizeof(boolArray[0]), printElement);LINE
 
     return 0;
+}
+*/
+class Awesome
+{
+  public:
+    Awesome( void ) : _n( 42 ) { return; }
+    int get( void ) const { return this->_n; }
+  private:
+    int _n;
+};
+
+std::ostream & operator<<( std::ostream & o, Awesome const & rhs )
+{
+  o << rhs.get();
+  return o;
+}
+
+template< typename T >
+void print( T& x )
+{
+  std::cout << x << std::endl;
+  return;
+}
+
+int main() {
+  int tab[] = { 0, 1, 2, 3, 4 };
+  Awesome tab2[5];
+
+  iter( tab, 5, print<const int> );
+  iter( tab2, 5, print<Awesome> );
+
+  return 0;
 }
