@@ -6,7 +6,7 @@
 /*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:21:51 by ddyankov          #+#    #+#             */
-/*   Updated: 2023/11/06 15:40:02 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/11/06 17:15:21 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ class Array
         Array(unsigned int n) : _size(n)
         {
             _array = new T[_size];
+            for (unsigned int i = 0; i < _size; i++)
+                _array[i] = T();
             std::cout << GREEN << "Default param constructror called" << RESET << std::endl; 
         }
         
